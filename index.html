@@ -28,6 +28,11 @@
         }
         .img-container {
             background-color: #c2d9ff;
+            background-image: url("images/overlay-bg.jpg");
+            background-blend-mode: overlay;
+            background-position: top right;
+            background-repeat: no-repeat;
+            background-size: cover;
             position: fixed;
             right: 0;
             top: 0;
@@ -35,6 +40,11 @@
             width: 100%;
             overflow: hidden;
             z-index: -1;
+        }
+        @media(min-width: 576px) {
+            .img-container {
+                background-size: 75%;
+            }
         }
         .img-container img {
             position: absolute;
@@ -63,7 +73,6 @@
 <body>
     <div class="wrapper col-lg-8 mx-auto px-3">
         <div class="img-container">
-            <img src="images/overlay-bg.jpg">
             <div class="gradient-white"></div>
         </div>
 
@@ -75,7 +84,7 @@
         </header>
 
         <main>
-            <div class="col-lg-8">
+            <div class="col-sm-8">
                 <h1>We are working on it!</h1>
 
                 <div class="my-5">
